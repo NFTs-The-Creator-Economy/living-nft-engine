@@ -1,0 +1,24 @@
+[package]
+name = "living-nft-oracle"
+version = "0.1.0"
+description = "Oracle service for updating dynamic NFTs based on real-world data"
+edition = "2021"
+
+[[bin]]
+name = "oracle"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { workspace = true }
+reqwest = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+soroban-sdk = { workspace = true }
+stellar-sdk = "0.24.0"
+soroban-rpc = "21.0.0"
+clap = { version = "4.4", features = ["derive"] }
+dotenv = "0.15"
+tracing = "0.1"
+tracing-subscriber = "0.3"

@@ -1,0 +1,27 @@
+[project]
+name = "living-nft-engine"
+version = "0.1.0"
+description = "Living NFT Engine - Dynamic NFTs on Stellar Network"
+license = "MIT"
+authors = ["Living NFT Engine Team"]
+
+[project.networks]
+standalone = "Living NFT Engine - Standalone Network"
+testnet = "Living NFT Engine - Testnet Network"
+mainnet = "Living NFT Engine - Mainnet Network"
+
+[project.contracts]
+living_nft_engine = "contracts/living-nft-engine"
+
+[project.profile.release]
+opt-level = 3
+debug = false
+lto = true
+codegen-units = 1
+panic = "abort"
+overflow-checks = true
+
+[project.profile.dev]
+opt-level = 0
+debug = true
+overflow-checks = true

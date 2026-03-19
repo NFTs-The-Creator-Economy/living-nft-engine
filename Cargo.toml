@@ -1,0 +1,31 @@
+[workspace]
+members = [
+    "contracts/*",
+    "oracle",
+    "backend",
+]
+resolver = "2"
+
+[workspace.dependencies]
+soroban-sdk = "21.0.0"
+soroban-token-sdk = "21.0.0"
+stellar-xdr = "21.0.0"
+tokio = { version = "1.35", features = ["full"] }
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+axum = "0.7"
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "json"] }
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1

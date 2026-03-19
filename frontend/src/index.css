@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+@layer components {
+  .solana-button {
+    @apply bg-gradient-to-r from-purple-500 to-green-500 hover:from-purple-600 hover:to-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .nft-card {
+    @apply bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-purple-500 transition-all duration-300;
+  }
+  
+  .trait-bar {
+    @apply bg-gray-700 rounded-full h-2 overflow-hidden;
+  }
+  
+  .trait-fill {
+    @apply bg-gradient-to-r from-purple-500 to-green-500 h-full transition-all duration-500;
+  }
+}

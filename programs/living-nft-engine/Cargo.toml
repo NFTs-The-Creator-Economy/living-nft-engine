@@ -1,0 +1,26 @@
+[package]
+name = "living-nft-engine"
+version = "0.1.0"
+description = "Dynamic NFT engine with oracle-driven trait updates"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "living_nft_engine"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+solana-program = { workspace = true }
+
+[dev-dependencies]
+solana-program-test = "1.18.0"
+solana-sdk = { workspace = true }
+tokio = { workspace = true }
